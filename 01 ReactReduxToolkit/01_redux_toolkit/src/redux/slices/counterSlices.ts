@@ -7,7 +7,7 @@ export const increaseByAmount = createAction("increaseByAmount/counter");
 // let action = increment();
 // console.log("action:", action);
 
-const initialState = {
+const initialState: RootState = {
   value: 0,
 };
 
@@ -15,13 +15,13 @@ const initialState = {
 // 1. Using Builder Notation (preferred):
 
 export const counterSlices = createReducer(initialState, (builder) => {
-  builder.addCase(increment, (state, action) => {
+  builder.addCase(increment, (state: RootState, action: Dispatch) => {
     state.value++;
   });
-  builder.addCase(decrement, (state, action) => {
+  builder.addCase(decrement, (state: RootState, action: Dispatch) => {
     state.value--;
   });
-  builder.addCase(increaseByAmount, (state, action) => {
+  builder.addCase(increaseByAmount, (state: RootState, action: Dispatch) => {
     state.value = action.payload;
   });
 });

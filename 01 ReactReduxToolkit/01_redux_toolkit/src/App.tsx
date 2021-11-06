@@ -1,14 +1,15 @@
-import "./App.scss";
 import {useDispatch, useSelector} from "react-redux";
+
 // import {decrement, increment, increaseByAmount} from "./redux/slices/counterSlices";
 import {decrement, increment, increaseByAmount} from "./redux/slices/counterSlice2";
+import "./App.scss";
 
 function App() {
-  const dispatch = useDispatch();
+  const dispatch: Dispatch = useDispatch();
 
   // const counter = useSelector((state) => state && state.counter); //- The same as below
-  const counter = useSelector((state) => state?.counter);
-  console.log("counter:", counter);
+  const counter = useSelector((state: RootState) => state?.counter);
+  // console.log("counter:", counter);
 
   return (
     <div style={{textAlign: "center"}}>
