@@ -10,7 +10,7 @@ function App() {
     dispatch(fetchPost());
   }, [dispatch]);
 
-  const post = useSelector((state) => state.post);
+  const post = useSelector((state: RootState) => state.post);
   // console.log("post:", post);
   const {postList, loading} = post;
 
@@ -24,7 +24,7 @@ function App() {
       {loading ? (
         <h2>Loading...</h2>
       ) : (
-        postList?.map((post) => (
+        postList?.map((post: {id: number; title: string; body: string}) => (
           <React.Fragment key={post.id}>
             <h2>{post?.title}</h2>
             <h2>{post?.body}</h2>

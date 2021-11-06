@@ -1,37 +1,43 @@
-import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import axios from "axios";
 
-// Create Th Actions
-export const fetchPost = createAsyncThunk("post/list", async (payload, {rejectWithValue, getState, dispatch}) => {
-  try {
-    // const post =await axios.get("https://jsonplaceholder.typicode.com/posts")
-    const {data} = await axios.get("https://jsonplaceholder.typicode.com/posts");
-    return data;
-  } catch (error) {
-    return error?.response;
+// Create The Actions
+export const fetchPost: Fetch = createAsyncThunk<RootState>(
+  "post/list",
+  async (payload, {rejectWithValue, getState, dispatch}) => {
+    try {
+      // const post =await axios.get("https://jsonplaceholder.typicode.com/posts")
+      const {data} = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      return data;
+    } catch (error: Fetch) {
+      return error?.response;
+    }
   }
-});
+);
+
+const initialState = {} as RootState;
 
 // Slices
 const postSlices = createSlice({
   name: "post",
-  initialState: {},
+  initialState,
+  reducers: {},
   extraReducers: {
     // Handling pending
-    [fetchPost.pending]: (state, acton) => {
+    [fetchPost.pending]: (state: RootState) => {
       state.loading = true;
     },
 
     // Handling fulfilled
-    [fetchPost.fulfilled]: (state, acton) => {
-      state.postList = acton.payload;
+    [fetchPost.fulfilled]: (state: RootState, action: PayloadAction<any>) => {
+      state.postList = action.payload;
       state.loading = false;
     },
 
     // Handling rejection
-    [fetchPost.rejected]: (state, acton) => {
-      state.postList = acton.payload;
-      state.error = acton.payload;
+    [fetchPost.rejected]: (state: RootState, action: PayloadAction<any>) => {
+      state.postList = action.payload;
+      state.error = action.payload;
     },
   },
 });
