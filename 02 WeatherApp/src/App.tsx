@@ -5,7 +5,7 @@ import ReactTooltip from "react-tooltip";
 import weatherSVG from "./img/weather.svg";
 import {fetchWeatherAction} from "./redux/weatherSlices";
 
-function App() {
+function App(): JSX.Element {
   const [city, setCity] = React.useState("Olsztyn");
   //Dispatch Action
   const dispatch: Dispatch | Action = useDispatch();
@@ -33,7 +33,7 @@ function App() {
           <input
             onClick={() => dispatch(fetchWeatherAction(city))}
             value={city}
-            onChange={(event) => setCity(event.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setCity(event.target.value)}
             placeholder="Search a City..."
             className="relative z-10 inline-block w-full md:w-auto mb-2  px-3 py-2 mr-4  font-medium leading-normal bg-transparent border-2 rounded-lg text-green-400 "
           ></input>

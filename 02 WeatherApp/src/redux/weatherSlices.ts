@@ -6,7 +6,7 @@ const API_KEY: ProcessEnv = process.env.REACT_APP_OPEN_WEATHER_KEY;
 
 // Action
 export const fetchWeatherAction: Fetch = (_city: string) =>
-  createAsyncThunk<RootState>("weather/fetch", async (payload, {rejectWithValue, getState, dispatch}: RootState) => {
+  createAsyncThunk<RootState>("weather/fetch", async (payload, {rejectWithValue}: RootState) => {
     try {
       const response: Fetch = await axios.get(
         `http://api.openweathermap.org/data/2.5/weather?q=${payload}&appid=${API_KEY}`
