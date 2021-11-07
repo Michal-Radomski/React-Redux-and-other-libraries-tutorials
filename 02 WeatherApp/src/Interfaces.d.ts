@@ -8,5 +8,5 @@ type RootState = ReturnType<typeof store.getState>;
 
 interface Action {
   type: string;
-  payload?: boolean | labels | data;
+  payload?: boolean | any;
 }

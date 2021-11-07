@@ -33,19 +33,19 @@ const weatherSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     //Pending
-    builder.addCase<any>(fetchWeatherAction.pending, (state: RootState) => {
+    builder.addCase(fetchWeatherAction.pending, (state: RootState) => {
       state.loading = true;
       state.weather = undefined;
       state.error = undefined;
     });
     //Fulfilled
-    builder.addCase<any>(fetchWeatherAction.fulfilled, (state: RootState, action: PayloadAction<any>) => {
+    builder.addCase(fetchWeatherAction.fulfilled, (state: RootState, action: PayloadAction<any>) => {
       state.weather = action?.payload;
       state.loading = false;
       state.error = false;
     });
     //Rejected
-    builder.addCase<any>(fetchWeatherAction.rejected, (state: RootState, action: PayloadAction<string>) => {
+    builder.addCase(fetchWeatherAction.rejected, (state: RootState, action: PayloadAction<string>) => {
       state.loading = false;
       state.weather = undefined;
       state.error = action?.payload;
