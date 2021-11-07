@@ -1,5 +1,6 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
+import ReactTooltip from "react-tooltip";
 
 import weatherSVG from "./img/weather.svg";
 import {fetchWeatherAction} from "./redux/weatherSlices";
@@ -18,8 +19,8 @@ function App() {
   // console.log("state:", state);
   return (
     <div>
-      <section className="relative bg-gray-900  min-h-screen">
-        <img className="w-56 lg:block lg:absolute top-0 left-0 pt-10" src={weatherSVG} alt="Weather Conditions" />
+      <section className="relative bg-gray-800  min-h-screen">
+        <img className="w-56 lg:block lg:absolute top-5 left-5 pt-10" src={weatherSVG} alt="Weather Conditions" />
 
         <div className="relative container pt-12 px-4 mb-20 mx-auto text-center">
           <h2 className="mt-8 mb-8 lg:mb-12 text-white text-4xl lg:text-6xl font-semibold" id="top">
@@ -33,7 +34,7 @@ function App() {
             onClick={() => dispatch(fetchWeatherAction(city))}
             value={city}
             onChange={(event) => setCity(event.target.value)}
-            placeholder="Search a City"
+            placeholder="Search a City..."
             className="relative z-10 inline-block w-full md:w-auto mb-2  px-3 py-2 mr-4  font-medium leading-normal bg-transparent border-2 rounded-lg text-green-400 "
           ></input>
           {/* Button */}
@@ -79,8 +80,9 @@ function App() {
                   <a
                     className="ml-auto flex items-center justify-center w-20 h-20 rounded-full  hover:bg-blue-700 text-white"
                     href="#top"
-                    // onMouseEnter="openPopover(event,'Go to the Top')"
+                    data-tip="Go to the Top"
                   >
+                    <ReactTooltip place="left" type="light" effect="solid" />
                     <span className="flex items-center justify-center w-16 h-16 rounded-full border-2">
                       {/* weather logo */}
                       <img
