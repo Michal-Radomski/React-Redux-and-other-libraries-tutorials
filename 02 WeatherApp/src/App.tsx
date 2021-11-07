@@ -8,13 +8,13 @@ import {fetchWeatherAction} from "./redux/weatherSlices";
 function App() {
   const [city, setCity] = React.useState("Olsztyn");
   //Dispatch Action
-  const dispatch = useDispatch();
+  const dispatch: Dispatch | Action = useDispatch();
   React.useEffect(() => {
     dispatch(fetchWeatherAction("Gdansk"));
   }, [dispatch]);
 
   //select State From the Store
-  const state = useSelector((state) => state);
+  const state: RootState = useSelector((state) => state);
   const {weather, loading, error} = state;
   // console.log("state:", state);
   return (
