@@ -30,48 +30,49 @@ const weatherSlice = createSlice({
   name: "weather",
   initialState,
   reducers: {},
-  extraReducers: {
-    //Pending
-    [fetchWeatherAction.pending]: (state: RootState, action: PayloadAction<any>) => {
-      state.loading = true;
-      state.weather = undefined;
-      state.error = undefined;
-    },
-    //Fulfilled
-    [fetchWeatherAction.fulfilled]: (state: RootState, action: PayloadAction<any>) => {
-      state.weather = action?.payload;
-      state.loading = false;
-      state.error = false;
-    },
-    //Rejected
-    [fetchWeatherAction.rejected]: (state: RootState, action: PayloadAction<string>) => {
-      state.loading = false;
-      state.weather = undefined;
-      state.error = action?.payload;
-    },
-  },
-
-  // - Previous Version
-  // extraReducers: (builder) => {
+  // - Map Notation
+  // extraReducers: {
   //   //Pending
-  //   builder.addCase(fetchWeatherAction.pending, (state: RootState) => {
+  //   [fetchWeatherAction.pending]: (state: RootState, action: PayloadAction<any>) => {
   //     state.loading = true;
   //     state.weather = undefined;
   //     state.error = undefined;
-  //   });
+  //   },
   //   //Fulfilled
-  //   builder.addCase(fetchWeatherAction.fulfilled, (state: RootState, action: PayloadAction<any>) => {
+  //   [fetchWeatherAction.fulfilled]: (state: RootState, action: PayloadAction<any>) => {
   //     state.weather = action?.payload;
   //     state.loading = false;
   //     state.error = false;
-  //   });
+  //   },
   //   //Rejected
-  //   builder.addCase(fetchWeatherAction.rejected, (state: RootState, action: PayloadAction<string>) => {
+  //   [fetchWeatherAction.rejected]: (state: RootState, action: PayloadAction<string>) => {
   //     state.loading = false;
   //     state.weather = undefined;
   //     state.error = action?.payload;
-  //   });
+  //   },
   // },
+
+  // - Recommended "builder callback" notation
+  extraReducers: (builder) => {
+    //Pending
+    builder.addCase(fetchWeatherAction.pending, (state: RootState) => {
+      state.loading = true;
+      state.weather = undefined;
+      state.error = undefined;
+    });
+    //Fulfilled
+    builder.addCase(fetchWeatherAction.fulfilled, (state: RootState, action: PayloadAction<any>) => {
+      state.weather = action?.payload;
+      state.loading = false;
+      state.error = false;
+    });
+    //Rejected
+    builder.addCase(fetchWeatherAction.rejected, (state: RootState, action: PayloadAction<string>) => {
+      state.loading = false;
+      state.weather = undefined;
+      state.error = action?.payload;
+    });
+  },
 });
 
 export default weatherSlice.reducer;

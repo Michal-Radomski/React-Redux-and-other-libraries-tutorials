@@ -32,7 +32,7 @@ function App(): JSX.Element {
           {/* Input */}
           <input
             onClick={() => dispatch(fetchWeatherAction(city))}
-            value={city}
+            value={city.charAt(0).toUpperCase() + city.slice(1)}
             onChange={(event: React.ChangeEvent<HTMLInputElement>) => setCity(event.target.value)}
             placeholder="Search a City..."
             className="relative z-10 inline-block w-full md:w-auto mb-2  px-3 py-2 mr-4  font-medium leading-normal bg-transparent border-2 rounded-lg text-green-400 "
