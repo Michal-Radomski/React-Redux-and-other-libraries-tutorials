@@ -8,6 +8,3 @@ Files written during different libraries tutorials.
 
 2. 02 WeatherApp -> files created during this [tutorial](https://www.youtube.com/watch?v=HQyCNoWrZik), author as above. The
    [OpenWeather API key](https://openweathermap.org/) is not hosted on [github.com](https://github.com/).
-
-3. 03 Asynchronous vs Synchronous Programming in JS -> files created during this
-   [tutorial](https://www.youtube.com/watch?v=oesicy3CcXE).
