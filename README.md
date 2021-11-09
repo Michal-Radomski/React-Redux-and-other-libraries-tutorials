@@ -11,3 +11,5 @@ Files written during different libraries tutorials.
 
 3. 03 Redux Toolkit Query -> files created during this [tutorial](https://www.youtube.com/watch?v=9V-Up8QT7tM) and
    React-Fetch-Hook according to [this](https://www.npmjs.com/package/react-fetch-hook).
+
+4. 04 React Query -> files created during this [tutorial](https://www.youtube.com/watch?v=aLQbVd-2tIo).
