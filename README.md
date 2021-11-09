@@ -9,4 +9,5 @@ Files written during different libraries tutorials.
 2. 02 WeatherApp -> files created during this [tutorial](https://www.youtube.com/watch?v=HQyCNoWrZik), author as above. The
    [OpenWeather API key](https://openweathermap.org/) is not hosted on [github.com](https://github.com/).
 
-3. 03 Redux Toolkit Query -> files created during this [tutorial](https://www.youtube.com/watch?v=9V-Up8QT7tM).
+3. 03 Redux Toolkit Query -> files created during this [tutorial](https://www.youtube.com/watch?v=9V-Up8QT7tM) and
+   React-Fetch-Hook according to [this](https://www.npmjs.com/package/react-fetch-hook).
