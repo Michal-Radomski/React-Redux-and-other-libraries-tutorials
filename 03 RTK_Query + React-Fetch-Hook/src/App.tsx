@@ -4,7 +4,7 @@ import "./App.scss";
 import {useGetUsersQuery} from "./users";
 import FetchHook from "./FetchHook";
 
-function App() {
+function App(): JSX.Element {
   // console.log("useGetUsersQuery:", useGetUsersQuery);
   const {data, error, isLoading, isSuccess, isError} = useGetUsersQuery();
   // console.log("data, error, isLoading, isSuccess, isError:", data, error, isLoading, isSuccess, isError);
@@ -15,7 +15,7 @@ function App() {
         {/* //-  BELOW: if isLoading true => "Loading..." */}
         {isLoading && "Loading..."}
         {isError && error.message}
-        {isSuccess && data && data.map((user) => <h4 key={user.id}>{user.name}</h4>)}
+        {isSuccess && data && data.map((user: User) => <h4 key={user.id}>{user.name}</h4>)}
       </div>
       <hr />
       <div style={{textAlign: "center"}}>
