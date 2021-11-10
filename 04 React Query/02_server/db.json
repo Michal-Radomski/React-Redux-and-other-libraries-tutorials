@@ -1,9 +1,9 @@
 {
   "users": [
     {
-      "name": "Prezes",
+      "name": "Prezes Jarek",
       "email": "jarek@pis.com",
-      "details": "test test",
+      "details": "prezes Jarek",
       "id": 1
     },
     {
