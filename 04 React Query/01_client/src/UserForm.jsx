@@ -12,6 +12,7 @@ const UserForm = ({user, setIsEditing}) => {
   const {isLoading, mutate} = useMutation(api.updateUser, {
     onSuccess: (data) => {
       queryClient.setQueryData(["user"], user.id, data);
+      // console.log("data:", data)
       // Trigger the old data to be updated
       // queryClient.invalidateQueries(["user"], user.id);
       setIsEditing(false);

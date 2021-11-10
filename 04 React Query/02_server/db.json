@@ -1,23 +1,20 @@
 {
   "users": [
     {
-      "id": 1,
-      "first_name": "Sebastian",
-      "last_name": "Eschweiler",
-      "email": "sebastian@codingthesmartway.com",
-      "details": "empty..."
+      "name": "Prezes",
+      "email": "jarek@pis.com",
+      "details": "test test",
+      "id": 1
     },
     {
       "id": 2,
-      "first_name": "Steve",
-      "last_name": "Palmer",
+      "name": "Steve",
       "email": "steve@codingthesmartway.com",
       "details": "empty..."
     },
     {
       "id": 3,
-      "first_name": "Ann",
-      "last_name": "Smith",
+      "name": "Ann",
       "email": "ann@codingthesmartway.com",
       "details": "empty..."
     }

@@ -33,6 +33,7 @@ const UserDetails = ({userId}) => {
             {isFetching && "Background refetching"}
             <h2>{user.name}</h2>
             <p>{user.email}</p>
+            <p>{user.details}</p>
           </div>
         )}
       </div>
