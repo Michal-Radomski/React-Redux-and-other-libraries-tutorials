@@ -10,5 +10,8 @@ npm-debug.log*
 .env
 .env.test
 
+# Dependency directories
+node_modules/
+
 # My entries:
 .vscode/
