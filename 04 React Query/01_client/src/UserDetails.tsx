@@ -4,7 +4,7 @@ import {useQuery} from "react-query";
 import * as api from "./usersApi";
 import UserForm from "./UserForm";
 
-const UserDetails = ({userId}) => {
+const UserDetails = ({userId}: {userId: number | any}): JSX.Element => {
   const [isEditing, setIsEditing] = React.useState(false);
   const {
     data: user,

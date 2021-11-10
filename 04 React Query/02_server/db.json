@@ -1,10 +1,10 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Prezes",
+      "name": "Prezes Jarek",
       "email": "jarek@pis.com",
-      "details": "empty..."
+      "details": "prezes Jarek...",
+      "id": 1
     },
     {
       "id": 2,

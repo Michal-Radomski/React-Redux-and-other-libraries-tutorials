@@ -3,7 +3,7 @@ import {useMutation, useQueryClient} from "react-query";
 
 import * as api from "./usersApi";
 
-const UserForm = ({user, setIsEditing}) => {
+const UserForm = ({user, setIsEditing}: {user: User; setIsEditing: boolean | any}): JSX.Element => {
   const [fields, setFields] = React.useState({...user});
   // console.log("user:", user);
   // console.log("setIsEditing:", setIsEditing);
@@ -19,15 +19,15 @@ const UserForm = ({user, setIsEditing}) => {
     },
   });
 
-  const handleChange = (event) => {
+  const handleChange = (event: {target: {name: string; value: string}}) => {
     const {name, value} = event.target;
     // console.log("name, value:", name, value);
     setFields({...fields, [name]: value});
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.SyntheticEvent) => {
     event.preventDefault();
-    console.log("fields:", fields);
+    // console.log("fields:", fields);
     mutate(fields);
   };
 
@@ -52,7 +52,6 @@ const UserForm = ({user, setIsEditing}) => {
           Details:{" "}
           <textarea
             name="details"
-            type="text"
             value={fields.details}
             onChange={handleChange}
             style={{width: "100%", marginBottom: "20px", height: "100px"}}

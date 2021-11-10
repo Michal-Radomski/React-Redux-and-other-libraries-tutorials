@@ -3,7 +3,7 @@ import "./App.scss";
 import Users from "./Users";
 import UserDetails from "./UserDetails";
 
-function App() {
+function App(): JSX.Element {
   const [userId, setUserId] = React.useState();
   return (
     <div style={{display: "flex", flexDirection: "row"}}>
