@@ -16,5 +16,4 @@ Files written during different libraries tutorials.
    JSON-Server was created according to this
    [tutorial](https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d).
 
-5. 05 Preact App tutorial -> files created during this
-   [tutorial](https://developer.okta.com/blog/2017/10/19/build-a-preact-app-with-authentication).
+5. 05 Preact App tutorial -> files created during this [tutorial](https://preactjs.com/guide/v10/tutorial/).
