@@ -17,3 +17,6 @@ Files written during different libraries tutorials.
    [tutorial](https://medium.com/codingthesmartway-com-blog/create-a-rest-api-with-json-server-36da8680136d).
 
 5. 05 Preact App tutorial -> files created during this [tutorial](https://preactjs.com/guide/v10/tutorial/).
+
+6. 06 CSSinJS and Emotion tutorials -> files created according to [https://cssinjs.org](https://cssinjs.org) and
+   [https://emotion.sh](https://emotion.sh).
