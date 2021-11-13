@@ -1,10 +1,11 @@
+//- Fix the styles
+
 import React from "react";
 import {css} from "@emotion/react";
 
-const Emotion3 = (): JSX.Element => {
+const Emotion3 = () => {
   const style: any = css`
     color: hotpink;
-    background-color: green;
   `;
 
   const SomeComponent = ({children}: any): JSX.Element => (
@@ -14,17 +15,9 @@ const Emotion3 = (): JSX.Element => {
     </div>
   );
 
-  const anotherStyle: any = css({
-    textDecoration: "underline",
-  });
-
-  const AnotherComponent = (): JSX.Element => <div className={anotherStyle}>Some text with an underline.</div>;
-
   return (
     <div>
-      <SomeComponent>
-        <AnotherComponent />
-      </SomeComponent>
+      <SomeComponent />
     </div>
   );
 };

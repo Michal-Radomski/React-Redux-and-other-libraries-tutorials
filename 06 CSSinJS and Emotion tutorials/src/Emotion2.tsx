@@ -1,3 +1,5 @@
+//- Fix the styles
+
 const P = (props: any) => (
   <p
     css={{
