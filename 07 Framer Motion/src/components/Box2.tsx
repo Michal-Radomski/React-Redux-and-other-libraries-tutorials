@@ -15,7 +15,9 @@ function Box2(): JSX.Element {
           bottom: 5,
         }}
         //  drag="y"
-      ></motion.div>
+      >
+        Box2
+      </motion.div>
     </div>
   );
 }

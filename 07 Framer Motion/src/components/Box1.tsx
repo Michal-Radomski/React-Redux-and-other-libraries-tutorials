@@ -24,7 +24,9 @@ function Box1(): JSX.Element {
         onClick={() => {
           setIsAnimated(!isAnimated);
         }}
-      ></motion.div>
+      >
+        Box1
+      </motion.div>
     </div>
   );
 }
