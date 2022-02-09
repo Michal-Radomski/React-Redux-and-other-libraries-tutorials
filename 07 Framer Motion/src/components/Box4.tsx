@@ -1,22 +1,19 @@
 import {motion} from "framer-motion";
 
 function Box4(): JSX.Element {
-  const boxVariant = {
-    name1: {
-      x: 100,
-      scale: 1.5,
-      backgroundColor: "yellow,",
-    },
-    name2: {
-      x: 800,
-      scale: 0.3,
-      backgroundColor: "orchid",
-    },
-  };
-
   return (
     <div className="box-container">
-      <motion.div className="box" variants={boxVariant} initial="name1" animate="name2">
+      <motion.div
+        className="box"
+        animate={{
+          scale: [1, 1.4, 1.4, 1, 1],
+          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          rotate: [0, 0, 270, 270, 0],
+        }}
+        transition={{
+          duration: 2,
+        }}
+      >
         Box4
       </motion.div>
     </div>
