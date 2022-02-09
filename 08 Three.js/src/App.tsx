@@ -15,11 +15,11 @@ function App() {
     <React.Fragment>
       <CanvasContainer>
         <Canvas>
-          {/* {console.log("Canvas:", Canvas)} */}
-          {/* <React.Suspense fallback={null}></React.Suspense> */}
-          <React.Suspense fallback={<h1>Loading...</h1>}></React.Suspense>
-          <Earth />
-          {/* {console.log("Earth:", Earth)} */}
+          {console.log("Canvas:", Canvas)}
+          <React.Suspense fallback={null}>
+            <Earth />
+            {console.log("Earth:", Earth)}
+          </React.Suspense>
         </Canvas>
       </CanvasContainer>
     </React.Fragment>
