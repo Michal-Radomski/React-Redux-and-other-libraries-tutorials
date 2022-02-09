@@ -20,3 +20,5 @@ Files written during different libraries tutorials.
 
 6. 06 CSSinJS and Emotion tutorials -> files created according to [https://cssinjs.org](https://cssinjs.org) and
    [https://emotion.sh](https://emotion.sh).
+
+7. 07 Framer Motion -> files created according to [tutorial](https://www.youtube.com/watch?v=1vKiPwEYbyk).
