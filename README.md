@@ -22,3 +22,5 @@ Files written during different libraries tutorials.
    [https://emotion.sh](https://emotion.sh).
 
 7. 07 Framer Motion -> files created according to [tutorial](https://www.youtube.com/watch?v=1vKiPwEYbyk).
+
+8. 08 Three.js -> files created according to [tutorial](https://www.youtube.com/watch?v=ymavtyRpT0E).
