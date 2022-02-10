@@ -25,8 +25,8 @@ const Earth: React.FC<{}> = (): JSX.Element => {
   useFrame(({clock}) => {
     const elapsedTime = clock.getElapsedTime();
     // console.log("elapsedTime:", elapsedTime);
-    earthRef!.current!.rotation.y = elapsedTime / 6;
-    cloudsRef!.current!.rotation.y = elapsedTime / 6;
+    earthRef!.current!.rotation.y = elapsedTime / 15;
+    cloudsRef!.current!.rotation.y = elapsedTime / 15;
   });
 
   React.useEffect(() => {

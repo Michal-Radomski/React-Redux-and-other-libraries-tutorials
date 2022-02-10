@@ -20,8 +20,7 @@ const Background = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 13%;
-  z-index: 99;
+  z-index: 9;
 `;
 
 //* WebGL compatibility check
