@@ -10,9 +10,24 @@ const CanvasContainer = styled.div`
   height: 100%;
 `;
 
-function App() {
+//* WebGL compatibility check
+if (typeof WebGLRenderingContext === "undefined") {
+  // This browser doesn't even know what WebGL is
+  console.log("This browser doesn't even know what WebGL is");
+} else {
+  let WebGL = document.createElement("canvas").getContext("webgl");
+  console.log("WebGL:", WebGL);
+  if (!WebGL) {
+    // webgl failed to initialize for any number of reasons
+    // including it's turned off, the browser blacklisted the drivers,
+    // it's out of memory, other.
+    console.log("WebGL failed to initialize");
+  }
+}
+
+function App(): JSX.Element {
   return (
-    <React.Fragment>
+    <>
       <CanvasContainer>
         <Canvas>
           {/* {console.log("Canvas:", Canvas)} */}
@@ -22,7 +37,7 @@ function App() {
           </React.Suspense>
         </Canvas>
       </CanvasContainer>
-    </React.Fragment>
+    </>
   );
 }
 
