@@ -10,6 +10,20 @@ const CanvasContainer = styled.div`
   height: 100%;
 `;
 
+const Background = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1756dd32;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 13%;
+  z-index: 99;
+`;
+
 //* WebGL compatibility check
 if (typeof WebGLRenderingContext === "undefined") {
   // This browser doesn't even know what WebGL is
@@ -29,6 +43,7 @@ function App(): JSX.Element {
   return (
     <>
       <CanvasContainer>
+        <Background />
         <Canvas>
           {/* {console.log("Canvas:", Canvas)} */}
           <React.Suspense fallback={null}>
