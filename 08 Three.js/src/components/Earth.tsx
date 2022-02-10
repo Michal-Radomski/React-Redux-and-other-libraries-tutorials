@@ -20,12 +20,18 @@ const Earth: React.FC<{}> = (): JSX.Element => {
   return (
     <React.Fragment>
       <ambientLight intensity={0.9} color={0xffffff} />
-
+      <Stars
+        radius={200} // Radius of the inner sphere (default=100)
+        depth={60} // Depth of area where stars should fit (default=50)
+        count={10000} // Amount of stars (default=5000)
+        factor={7} // Size factor (default=4)
+        saturation={0} // Saturation 0-1 (default=0)
+        fade={true} // Faded dots (default=false)
+      />
       <mesh position={[0, 0, 3]}>
         <sphereGeometry args={[1.005, 32, 32]} />
         <meshPhongMaterial map={cloudsMap} opacity={0.4} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
       </mesh>
-
       <mesh position={[0, 0, 3]}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshPhongMaterial specularMap={specularMap} />
