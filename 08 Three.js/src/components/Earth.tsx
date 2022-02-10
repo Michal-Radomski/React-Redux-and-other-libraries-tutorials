@@ -51,8 +51,7 @@ const Earth: React.FC<{}> = (): JSX.Element => {
       </mesh>
       <mesh ref={earthRef} position={[0, 0, 3]}>
         <sphereGeometry args={[1, 32, 32]} />
-        <meshPhongMaterial specularMap={specularMap} />
-        <meshPhongMaterial lightMap={nightMap} />
+        <meshPhongMaterial specularMap={specularMap} lightMap={nightMap} />
         <meshStandardMaterial map={colorMap} normalMap={normalMap} metalness={0.4} roughness={0.7} />
         <OrbitControls
           enableZoom={true}
