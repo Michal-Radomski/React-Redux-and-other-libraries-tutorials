@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React from "react";
 import styled from "styled-components";
 import {Canvas} from "@react-three/fiber";
 
@@ -16,10 +16,10 @@ function App() {
       <CanvasContainer>
         <Canvas>
           {/* {console.log("Canvas:", Canvas)} */}
-          <Suspense fallback={null}>
+          <React.Suspense fallback={null}>
             <Earth />
             {/* {console.log("Earth:", Earth)} */}
-          </Suspense>
+          </React.Suspense>
         </Canvas>
       </CanvasContainer>
     </React.Fragment>

@@ -1,6 +1,6 @@
 import React from "react";
-import {useFrame, useLoader} from "@react-three/fiber";
-import {OrbitControls, Stars} from "@react-three/drei";
+import {useLoader} from "@react-three/fiber";
+import {OrbitControls} from "@react-three/drei";
 import * as THREE from "three";
 
 //- Textures
@@ -10,7 +10,7 @@ import EarthSpecularMap from "../textures/8k_earth_specular_map.jpg";
 import EarthCloudsMap from "../textures/8k_earth_clouds.jpg";
 
 const Earth = () => {
-  const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(THREE.TextureLoader, [
+  const [colorMap, normalMap, specularMap] = useLoader(THREE.TextureLoader, [
     EarthDayMap,
     EarthNormalMap,
     EarthSpecularMap,
