@@ -17,6 +17,8 @@ function App() {
     <>
       <CanvasContainer>
         <Canvas>
+          <directionalLight intensity={1} />
+          <ambientLight intensity={0.6} />
           <React.Suspense fallback={null}>
             <MarsSphere />
           </React.Suspense>
