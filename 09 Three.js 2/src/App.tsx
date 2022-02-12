@@ -7,6 +7,7 @@ import "./App.scss";
 import MarsSphere from "./components/MarsSphere";
 import {Loader} from "./components/MarsSphere";
 import SkyBox from "./components/SkyBox";
+import CameraControls from "./components/CameraControls";
 
 const CanvasContainer = styled.div`
   width: 100%;
@@ -18,8 +19,10 @@ function App(): JSX.Element {
     <>
       <CanvasContainer>
         <Canvas>
-          <directionalLight intensity={0.9} color={0x404040} />
-          <ambientLight intensity={0.6} color={0x404040} />
+          <CameraControls />
+          {/* //- Sunlight Color: #F4E99B */}
+          <directionalLight intensity={0.7} color={0xf4e99b} />
+          <ambientLight intensity={0.6} color={0xf4e99b} />
           <React.Suspense fallback={<Loader />}>
             <MarsSphere />
           </React.Suspense>

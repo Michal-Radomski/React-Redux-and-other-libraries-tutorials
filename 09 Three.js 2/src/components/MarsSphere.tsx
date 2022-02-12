@@ -11,7 +11,7 @@ export function Loader(): JSX.Element {
   const {progress} = useProgress();
   return (
     <Html center>
-      <h2 style={{width: "300px", color: "black", fontWeight: "bold", fontStyle: "italic"}}>{progress} % loaded...</h2>
+      <h2 style={{width: "300px", color: "blue", fontWeight: "bold", fontStyle: "italic"}}>{progress} % loaded...</h2>
     </Html>
   );
 }
@@ -46,6 +46,7 @@ const MarsSphere = (): JSX.Element => {
         position={[0, 0, 0]}
         geometry={nodes.Cube008.geometry}
         material={materials["Default OBJ.005"]}
+        onClick={() => console.log("Click nr...")}
       />
     </React.Fragment>
   );

@@ -9,6 +9,7 @@ const SkyBox: React.FC<{}> = () => {
 
   scene.background = new CubeTextureLoader()
     .setPath("/skybox_images/")
+    //* Order: pos-x, neg-x, pos-y, neg-y, pos-z, neg-z:
     .load(["right.png", "left.png", "back.png", "front.png", "top.png", "bottom.png"]);
 
   return null;
