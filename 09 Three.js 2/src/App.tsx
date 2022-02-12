@@ -6,6 +6,7 @@ import "./App.scss";
 
 import MarsSphere from "./components/MarsSphere";
 import {Loader} from "./components/MarsSphere";
+import SkyBox from "./components/SkyBox";
 
 const CanvasContainer = styled.div`
   width: 100%;
@@ -22,6 +23,7 @@ function App(): JSX.Element {
           <React.Suspense fallback={<Loader />}>
             <MarsSphere />
           </React.Suspense>
+          <SkyBox />
         </Canvas>
       </CanvasContainer>
     </>

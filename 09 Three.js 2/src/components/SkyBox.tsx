@@ -5,18 +5,12 @@ import {CubeTextureLoader} from "three";
 
 const SkyBox: React.FC<{}> = () => {
   const {scene} = useThree();
-  const loader = new CubeTextureLoader();
+  // console.log("scene:", scene);
 
-  const texture = loader.load([
-    "/skybox_images/back.png",
-    "/skybox_images/top.png",
-    "/skybox_images/front.png",
-    "/skybox_images/bottom.png",
-    "/skybox_images/left.png",
-    "/skybox_images/right.png",
-  ]);
+  scene.background = new CubeTextureLoader()
+    .setPath("/skybox_images/")
+    .load(["back.png", "top.png", "front.png", "bottom.png", "left.png", "right.png"]);
 
-  scene.background = texture;
   return null;
 };
 
