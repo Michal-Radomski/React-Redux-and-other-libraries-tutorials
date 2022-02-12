@@ -9,7 +9,11 @@ import {GLTF} from "three-stdlib";
 //* Loader
 export function Loader(): JSX.Element {
   const {progress} = useProgress();
-  return <Html center>{progress} % loaded...</Html>;
+  return (
+    <Html center>
+      <h2 style={{width: "300px", color: "black", fontWeight: "bold", fontStyle: "italic"}}>{progress} % loaded...</h2>
+    </Html>
+  );
 }
 
 type GLTFResult = GLTF & {

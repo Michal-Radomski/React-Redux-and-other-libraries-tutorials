@@ -24,3 +24,7 @@ Files written during different libraries tutorials.
 7. 07 Framer Motion -> files created according to [tutorial](https://www.youtube.com/watch?v=1vKiPwEYbyk).
 
 8. 08 Three.js -> files created according to [tutorial](https://www.youtube.com/watch?v=ymavtyRpT0E).
+
+9. 09 Three.js 2 -> files created according to [tutorial](https://dev.to/danielkrupnyy/react-three-fiber-planet-mars-3kac).
+   3D Mars .glb model is taken from [NASA](https://mars.nasa.gov/resources/24881/planet-mars-3d-model/). SkyBox is generated
+   by: [wwwtyro.net](https://tools.wwwtyro.net/space-3d/index.html).
