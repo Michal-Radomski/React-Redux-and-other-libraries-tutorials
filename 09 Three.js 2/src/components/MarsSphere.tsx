@@ -1,9 +1,16 @@
 import React from "react";
-import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
+// import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import {useFrame, useLoader} from "@react-three/fiber";
 import * as Three from "three";
-import {useGLTF} from "@react-three/drei";
+import {useGLTF, Html, useProgress} from "@react-three/drei";
 import {GLTF} from "three-stdlib";
+
+//* Loader
+export function Loader(): JSX.Element {
+  const {progress} = useProgress();
+  return <Html center>{progress} % loaded...</Html>;
+}
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -14,14 +21,16 @@ type GLTFResult = GLTF & {
   };
 };
 
+//* Mars_3D
 const MarsSphere = (): JSX.Element => {
   const planet = React.useRef<Three.Mesh>(null!);
 
   const {nodes, materials} = useGLTF("models/Mars_3D.glb") as GLTFResult;
+  // console.log("nodes, materials:", nodes, materials);
 
-  const MarsNode = useLoader(GLTFLoader, "models/Mars_3D.glb");
-
-  console.log("MarsNode:", MarsNode);
+  //* Unnecessary
+  // const MarsNode = useLoader(GLTFLoader, "models/Mars_3D.glb");
+  // console.log("MarsNode:", MarsNode);
 
   useFrame(() => (planet.current.rotation.y += 0.0002));
 
