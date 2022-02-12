@@ -12,7 +12,7 @@ const CanvasContainer = styled.div`
   height: 100%;
 `;
 
-function App() {
+function App(): JSX.Element {
   return (
     <>
       <CanvasContainer>
