@@ -11,7 +11,7 @@ export function Loader(): JSX.Element {
   const {progress} = useProgress();
   return (
     <Html center>
-      <h1 style={{width: "300px", color: "blue", fontWeight: "bold", fontStyle: "italic"}}>
+      <h1 style={{width: "320px", color: "blue", fontWeight: "bold", fontStyle: "italic"}}>
         {progress.toFixed(2)} % loaded...
       </h1>
     </Html>
