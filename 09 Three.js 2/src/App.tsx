@@ -9,6 +9,8 @@ import {Loader} from "./components/MarsSphere";
 import SkyBox from "./components/SkyBox";
 import CameraControls from "./components/CameraControls";
 
+import StarWarsCrawl from "./components/StarWarsCrawl/StarWarsCrawl";
+
 const CanvasContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -29,6 +31,7 @@ function App(): JSX.Element {
           <SkyBox />
         </Canvas>
       </CanvasContainer>
+      <StarWarsCrawl />
     </>
   );
 }
