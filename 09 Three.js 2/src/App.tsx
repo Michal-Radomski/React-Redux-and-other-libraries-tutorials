@@ -13,7 +13,7 @@ import StarWarsCrawl from "./components/StarWarsCrawl/StarWarsCrawl";
 
 const CanvasContainer = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 100%;
 `;
 
 function App(): JSX.Element {
@@ -30,8 +30,8 @@ function App(): JSX.Element {
           </React.Suspense>
           <SkyBox />
         </Canvas>
+        <StarWarsCrawl />
       </CanvasContainer>
-      <StarWarsCrawl />
     </>
   );
 }

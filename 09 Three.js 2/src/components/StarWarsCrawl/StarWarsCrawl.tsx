@@ -15,7 +15,11 @@ const StarWarsCrawl = (): JSX.Element => {
     //*Below the same
     // gsap.to(intro.current, {opacity: 1, delay: 1, duration: 4.5});
     // gsap.to(intro.current, {opacity: 0, delay: 5.5, duration: 1.5});
-    tl.to(intro.current, {opacity: 1, delay: 1, duration: 4.5}).to(intro.current, {opacity: 0, duration: 1.5});
+    tl.to(intro.current, {opacity: 1, delay: 1, duration: 4.5})
+      .to(intro.current, {opacity: 0, duration: 1.5})
+      .set(title.current, {opacity: 1, scale: 2.75})
+      .to(title.current, {scale: 0.05, ease: "power2", duration: 8})
+      .to(title.current, {opacity: 0, duration: 1.5}, "-=1.5");
   }, []);
 
   return (
