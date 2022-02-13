@@ -13,7 +13,7 @@ import StarWarsCrawl from "./components/StarWarsCrawl/StarWarsCrawl";
 
 const CanvasContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 80vh;
 `;
 
 function App(): JSX.Element {
