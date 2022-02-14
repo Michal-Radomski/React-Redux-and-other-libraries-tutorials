@@ -8,11 +8,16 @@ import Volume from "./media/volume.png";
 
 import "./StarWarsCrawl.scss";
 
+interface AudioRefElem extends React.MutableRefObject<HTMLAudioElement> {
+  muted: boolean;
+  play(): void;
+}
+
 const StarWarsCrawl = (): JSX.Element => {
   const intro = React.useRef<HTMLDivElement>(null);
   const title = React.useRef<HTMLDivElement>(null);
   const content = React.useRef<HTMLDivElement>(null);
-  const audio = React.useRef<any>();
+  const audio = React.useRef<AudioRefElem | any>();
 
   const [muted, setMuted] = React.useState<boolean>(true);
 
@@ -26,7 +31,7 @@ const StarWarsCrawl = (): JSX.Element => {
         opacity: 0,
         duration: 1.5,
         onComplete: () => {
-          audio.current.play();
+          audio!.current!.play();
         },
       })
       .set(title.current, {opacity: 1, scale: 2.75, delay: 0.5})
@@ -50,19 +55,16 @@ const StarWarsCrawl = (): JSX.Element => {
         </section>
         <section className="crawl">
           <div className="content" ref={content}>
-            <h1 className="episode-number">Episode X</h1>
-            <h2 className="episode-title">THE APP AWAKENS</h2>
+            <h1 className="episode-number">Episode 0</h1>
+            <h2 className="episode-title">THE JEDI ON MARS</h2>
             <p>
-              The Development Team Lead has vanished. In her absence, the sinister FUNCTIONAL BUG has risen from the ashes of
-              the CI Tool and will not rest until the last developer has been destroyed.
+              Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than
+              only Mercury.
             </p>
+            <p>In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".</p>
             <p>
-              With the support of the QA TEAM, the Software Developer leads a brave RESISTANCE. He is desperate to find his
-              Lead and gain her help in restoring peace and justice to the repository.
-            </p>
-            <p>
-              The Developer has sent his most daring editor theme on a secret mission to the production branch, where an old
-              ally has discovered a clue to the Lead’s whereabouts....
+              Mars is the site of <b>Olympus Mons</b>, the largest volcano and highest known mountain on any planet in the
+              Solar System, and of <b>Valles Marineris</b>, one of the largest canyons in the Solar System.
             </p>
           </div>
         </section>
@@ -74,7 +76,7 @@ const StarWarsCrawl = (): JSX.Element => {
           className="volume"
           type="button"
           onClick={() => {
-            audio.current.muted = !muted;
+            audio!.current!.muted = !muted;
             setMuted(!muted);
           }}
         >
