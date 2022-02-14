@@ -80,7 +80,7 @@ const StarWarsCrawl = (): JSX.Element => {
             setMuted(!muted);
           }}
         >
-          {muted ? <img src={Mute} alt="Volume is off" /> : <img src={Volume} alt="Volume is on" />}
+          {muted ? <img src={Mute} alt="Volume is off" width={25} /> : <img src={Volume} alt="Volume is on" width={25} />}
         </button>
       </div>
     </>
