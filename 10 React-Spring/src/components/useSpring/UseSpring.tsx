@@ -1,5 +1,5 @@
 import React from "react";
-import {useSpring, animated as a} from "react-spring";
+import {useSpring, animated} from "react-spring";
 
 import "./styles.scss";
 
@@ -16,16 +16,22 @@ const UseSpring = (): JSX.Element => {
   return (
     <div className="container">
       <div className="button-container">
-        <button onClick={() => displayGreeting((a: boolean) => !a)} className="button">
+        <button
+          onClick={() => {
+            displayGreeting((Boolean: boolean) => !Boolean);
+            console.log("displayGreeting:", displayGreeting);
+          }}
+          className="button"
+        >
           Click Here
         </button>
       </div>
       {!greetingStatus ? (
         <div className="Intro">Click button below</div>
       ) : (
-        <a.div className="box" style={contentProps}>
+        <animated.div className="box" style={contentProps}>
           <h1>Hey there ! React Spring is awesome.</h1>
-        </a.div>
+        </animated.div>
       )}
     </div>
   );
