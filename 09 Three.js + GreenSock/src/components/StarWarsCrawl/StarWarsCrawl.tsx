@@ -2,6 +2,8 @@ import React from "react";
 import {gsap} from "gsap";
 
 import "./fonts/FranklinGothicBook.ttf";
+import "./fonts/FranklinGothicDemiCond.ttf";
+import "./fonts/FranklinGothicDemi.ttf";
 import Logo from "./media/logo.png";
 import Mute from "./media/mute.png";
 import Volume from "./media/volume.png";
@@ -37,7 +39,7 @@ const StarWarsCrawl = (): JSX.Element => {
       .set(title.current, {opacity: 1, scale: 2.75, delay: 0.5})
       .to(title.current, {scale: 0.05, ease: "power3.inOut", duration: 8})
       .to(title.current, {opacity: 0, duration: 1.5}, "-=1.5")
-      .to(content.current, {top: "-170%", duration: 40})
+      .to(content.current, {top: "-170%", duration: 35})
       .to(content.current, {opacity: 0, duration: 1.5});
   }, []);
 
@@ -55,7 +57,7 @@ const StarWarsCrawl = (): JSX.Element => {
         </section>
         <section className="crawl">
           <div className="content" ref={content}>
-            <h1 className="episode-number">Episode 0</h1>
+            <h1 className="episode-number">Episode X</h1>
             <h2 className="episode-title">THE JEDI ON MARS</h2>
             <p>
               Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than
@@ -64,11 +66,18 @@ const StarWarsCrawl = (): JSX.Element => {
             <p>In English, Mars carries the name of the Roman god of war and is often referred to as the "Red Planet".</p>
             <p>
               Mars is the site of <b>Olympus Mons</b>, the largest volcano and highest known mountain on any planet in the
-              Solar System, and of <b>Valles Marineris</b>, one of the largest canyons in the Solar System.
+              Solar System, and of <b>Valles Marineris</b>, one of the largest canyons in the Solar System. <br />
+              <a
+                href="https://en.wikipedia.org/wiki/Mars"
+                target="_blank"
+                rel="noreferrer"
+                style={{color: "orange", fontWeight: "bold", fontStyle: "italic"}}
+              >
+                Read more on Wikipedia...
+              </a>
             </p>
           </div>
         </section>
-
         <audio ref={audio} muted>
           <source type="audio/mpeg" src="https://ia801501.us.archive.org/23/items/StarWars_20180709/Star%20Wars.mp3" />
         </audio>
