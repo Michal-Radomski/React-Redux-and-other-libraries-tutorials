@@ -37,7 +37,7 @@ const StarWarsCrawl = (): JSX.Element => {
       .set(title.current, {opacity: 1, scale: 2.75, delay: 0.5})
       .to(title.current, {scale: 0.05, ease: "power3.inOut", duration: 8})
       .to(title.current, {opacity: 0, duration: 1.5}, "-=1.5")
-      .to(content.current, {top: "-170%", duration: 20})
+      .to(content.current, {top: "-170%", duration: 40})
       .to(content.current, {opacity: 0, duration: 1.5});
   }, []);
 
@@ -78,6 +78,7 @@ const StarWarsCrawl = (): JSX.Element => {
           onClick={() => {
             audio!.current!.muted = !muted;
             setMuted(!muted);
+            audio.current.volume = 0.35;
           }}
         >
           {muted ? <img src={Mute} alt="Volume is off" width={25} /> : <img src={Volume} alt="Volume is on" width={25} />}
