@@ -2,6 +2,7 @@ import React from "react";
 import "./App.scss";
 
 import UseSpring from "./components/useSpring/UseSpring";
+import UseSprings from "./components/useSprings/UseSprings";
 
 const globalStyle = {
   border: "2px solid green",
@@ -15,6 +16,9 @@ function App(): JSX.Element {
     <React.Fragment>
       <div style={globalStyle}>
         <UseSpring />
+      </div>
+      <div style={globalStyle}>
+        <UseSprings />
       </div>
     </React.Fragment>
   );
