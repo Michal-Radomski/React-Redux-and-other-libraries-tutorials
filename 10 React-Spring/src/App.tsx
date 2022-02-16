@@ -33,9 +33,9 @@ function App(): JSX.Element {
       <Toggle />
       <hr />
       <Picture />
-      <div style={globalStyle}>
-        <UseSpring2 />
-      </div>
+      <hr />
+      <UseSpring2 />
+      <hr />
     </React.Fragment>
   );
 }
