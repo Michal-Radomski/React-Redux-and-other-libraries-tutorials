@@ -9,6 +9,7 @@ import Toggle from "./components/Toggle";
 import Picture from "./components/Picture";
 import UseSpring2 from "./components/UseSpring2";
 import UseSpring3 from "./components/UseSpring3";
+import UseSpring4 from "./components/UseSpring4";
 
 const globalStyle = {
   border: "2px solid green",
@@ -38,6 +39,8 @@ function App(): JSX.Element {
       <UseSpring2 />
       <hr />
       <UseSpring3 />
+      <hr />
+      <UseSpring4 />
       <hr />
     </React.Fragment>
   );
