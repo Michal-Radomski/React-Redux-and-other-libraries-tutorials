@@ -4,6 +4,7 @@ import "./App.scss";
 import UseSpring from "./components/useSpring/UseSpring";
 import UseSprings from "./components/useSprings/UseSprings";
 import UseTrail from "./components/useTrail/UseTrail";
+import SpringClass from "./components/classComponents/SpringClass";
 
 const globalStyle = {
   border: "2px solid green",
@@ -24,6 +25,7 @@ function App(): JSX.Element {
       <div style={globalStyle}>
         <UseTrail />
       </div>
+      <SpringClass />
     </React.Fragment>
   );
 }
