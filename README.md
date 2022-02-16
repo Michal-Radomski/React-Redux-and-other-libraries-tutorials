@@ -31,4 +31,6 @@ Files written during different libraries tutorials.
    [wwwtyro.net](https://tools.wwwtyro.net/space-3d/index.html). Opening Star Wars Crawl Text is created according to this
    [tutorial](https://dev.to/mandiwise/animate-the-opening-star-wars-crawl-with-react-hooks-and-greensock-3mk8).
 
-10. 10 React-Spring -> files created according to this [tutorial](https://blog.logrocket.com/animations-with-react-spring).
+10. 10 React-Spring -> files created according to [this tutorial](https://blog.logrocket.com/animations-with-react-spring)
+    and [this tutorial](https://dev.to/vaibhavkhulbe/spring-it-on-a-complete-guide-to-react-spring-1om9) and
+    [this tutorial](https://www.digitalocean.com/community/tutorials/react-intro-to-react-spring).

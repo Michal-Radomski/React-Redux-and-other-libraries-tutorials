@@ -7,7 +7,7 @@ const calcXY = (x: number, y: number) => [-(y - window.innerHeight / 2) / 15, (x
 
 const perspective = (x: number, y: number, s: number) => `perspective(500px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-function Picture() {
+function Picture(): JSX.Element {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 0.5],
     config: {mass: 5, tension: 200, friction: 100},
