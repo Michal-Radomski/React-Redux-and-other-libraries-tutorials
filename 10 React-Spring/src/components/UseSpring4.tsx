@@ -1,12 +1,19 @@
 import React from "react";
-import {animated, useSpring} from "react-spring";
+import {animated, config, useSpring} from "react-spring";
 
 const UseSpring4 = (): JSX.Element => {
   const [on, toggle] = React.useState<boolean>(false);
 
   // @ts-ignore
   const {xy, c} = useSpring({
-    config: {duration: 1500},
+    // config: {duration: 1500},    //* Variant 1
+    // config: {                    //* Variant 2
+    //   mass: 5,
+    //   tension: 50,
+    //   friction: 25,
+    //   clamp: true,
+    // },
+    config: config.molasses, //* Variant 3
     from: {x: [0, 0], c: 0},
     xy: on ? 1 : 0,
     c: on ? 1 : 0,
