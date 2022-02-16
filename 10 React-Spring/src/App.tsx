@@ -7,6 +7,7 @@ import UseTrail from "./components/useTrail/UseTrail";
 import SpringClass from "./components/classComponents/SpringClass";
 import Toggle from "./components/Toggle";
 import Picture from "./components/Picture";
+import UseSpring2 from "./components/UseSpring2";
 
 const globalStyle = {
   border: "2px solid green",
@@ -32,7 +33,9 @@ function App(): JSX.Element {
       <Toggle />
       <hr />
       <Picture />
-      <hr />
+      <div style={globalStyle}>
+        <UseSpring2 />
+      </div>
     </React.Fragment>
   );
 }
