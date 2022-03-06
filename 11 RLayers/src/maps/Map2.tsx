@@ -8,6 +8,8 @@ import {RMap, RContext, ROSM, RControl} from "rlayers";
 
 const origin = [18.5, 54.5];
 
+// console.log("RContext", RContext);
+
 const Map2 = (): JSX.Element => {
   const [loc, setLoc] = React.useState<number[]>(origin);
   return (
@@ -18,7 +20,7 @@ const Map2 = (): JSX.Element => {
           height={"50vh"}
           className="example-map"
           initial={{center: fromLonLat(origin), zoom: 11}}
-          noDefaultControls={true}
+          noDefaultControls={false}
           onClick={React.useCallback((event: MapBrowserEvent<UIEvent>) => {
             const coords = event.map.getCoordinateFromPixel(event.pixel);
             const lonlat = toLonLat(coords);
@@ -26,18 +28,18 @@ const Map2 = (): JSX.Element => {
           }, [])}
         >
           <ROSM />
-          <RControl.RScaleLine />
+          <RControl.RScaleLine bar={true} />
           <RControl.RAttribution />
           <RControl.RZoom />
-          <RControl.RZoomSlider />
+          <RControl.RZoomSlider duration={300} />
           <RControl.RFullScreen />
-          <RControl.RFullScreen
+          {/* <RControl.RFullScreen
             // Take a look at index.html and example.css for this one
             className="example-fullscreen"
             source="fullscreen"
             label="&#x6269;"
             labelActive="&#x564f;"
-          />
+          /> */}
           <RControl.RCustom className="example-control">
             <RContext.Consumer>
               {({map}) => <button onClick={() => map?.getView().setCenter(fromLonLat(loc))}>C</button>}

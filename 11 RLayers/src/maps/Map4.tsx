@@ -52,8 +52,8 @@ function buildRoute(start: Point, finish: Point): Promise<LineString> {
 }
 
 const Map4 = (): JSX.Element => {
-  const [start, setStart] = React.useState(null! as Point);
-  const [finish, setFinish] = React.useState(null! as Point);
+  const [start, setStart] = React.useState(null as unknown as Point);
+  const [finish, setFinish] = React.useState(null as unknown as Point);
   enum Step {
     START = 0,
     FINISH = 1,
@@ -61,7 +61,7 @@ const Map4 = (): JSX.Element => {
   const [step, setStep] = React.useState(Step.START);
   const [startAddress, setStartAddress] = React.useState("");
   const [finishAddress, setFinishAddress] = React.useState("");
-  const [route, setRoute] = React.useState(null! as LineString);
+  const [route, setRoute] = React.useState(null as unknown as LineString);
 
   // On start change
   React.useEffect(() => {
@@ -85,8 +85,8 @@ const Map4 = (): JSX.Element => {
         height={"50vh"}
         className="example-map"
         initial={{center: fromLonLat([18.5, 54.5]), zoom: 11}}
-        onClick={(e) => {
-          const coords = e.map.getCoordinateFromPixel(e.pixel);
+        onClick={(event) => {
+          const coords = event.map.getCoordinateFromPixel(event.pixel);
           if (step === Step.START) {
             setFinish(null!);
             setStart(new Point(coords));
@@ -101,14 +101,14 @@ const Map4 = (): JSX.Element => {
         <RLayerVector>
           <RStyle>
             <RCircle radius={6}>
-              <RFill color="blue" />
+              <RFill color="red" />
             </RCircle>
           </RStyle>
           <RFeature key={0} geometry={start} />
           <RFeature key={1} geometry={finish} />
           <RFeature key={2} geometry={route}>
             <RStyle>
-              <RStroke width={3} color="darkgreen" />
+              <RStroke width={4} color="darkgreen" />
             </RStyle>
           </RFeature>
         </RLayerVector>
